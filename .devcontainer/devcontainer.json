@@ -6,8 +6,7 @@
     "customizations": {
       "vscode": {
         "extensions": [
-            "ms-mssql.mssql",
-            "ms-azuretools.vscode-docker"
+            "ms-mssql.mssql"
         ]
       }
     }
