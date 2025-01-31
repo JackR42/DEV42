@@ -1,0 +1,45 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/dotnet-mssql
+{
+	"name": "DEV42",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Set *default* container specific settings.json values on container create.
+			"settings": { 
+				"mssql.connections": [
+					{
+						"server": "localhost,1433",
+						"database": "",
+						"authenticationType": "SqlLogin",
+						"user": "sa",
+						"password": "P@ssw0rd",
+						"emptyPasswordInput": false,
+						"savePassword": false,
+						"profileName": "mssql-container"
+					}
+				],
+				"sqlDatabaseProjects.dotnetSDK Location": "/usr/bin/"
+			},
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"ms-dotnettools.csharp",
+				"ms-mssql.mssql"
+			]
+		}
+	},
+	"features": {
+        "ghcr.io/devcontainers/features/azure-cli:1": {
+            "version": "latest"
+        }
+	},
+	"postCreateCommand": "bash .devcontainer/mssql/postCreateCommand.sh 'P@ssw0rd' './bin/Debug/' './.devcontainer/mssql/'",
+	"remoteEnv": {
+		"PATH": "${containerEnv:PATH}:/opt/mssql-tools/bin"
+	}
+}
