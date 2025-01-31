@@ -2,7 +2,7 @@
     "name": "DevContainer42",
     "workspaceFolder": "/workspace",
     "dockerComposeFile": ["docker-compose.yml"],
-    "service": "dba",
+    "service": "sql1",
     // Add the IDs of extensions you want installed when the container is created.
     "customizations": {
       "vscode": {
