@@ -1,0 +1,19 @@
+{
+    "name": "DevContainer42",
+    "workspaceFolder": "/workspace",
+    "dockerComposeFile": ["docker-compose.yml"],
+    "service": "dba",
+    // Add the IDs of extensions you want installed when the container is created.
+    "customizations": {
+      "vscode": {
+        "extensions": [
+            "ms-mssql.mssql",
+            "ms-azuretools.vscode-docker"
+        ]
+      }
+    }
+    // Uncomment the next line if you want to keep your containers running after VS Code shuts down.
+    // "shutdownAction": "none",
+    // Uncomment the next line to run commands after the container is created - for example installing curl.
+    // "postCreateCommand": "apt-get update && apt-get install -y curl",
+  }
