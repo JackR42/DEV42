@@ -3,7 +3,7 @@ services:
   sql1:
     image: mcr.microsoft.com/mssql/server
     environment:
-      - ACCEPT_EULA=Y
-      - SA_PASSWORD=P@ssw0rd
+      - ACCEPT_EULA="Y"
+      - SA_PASSWORD="P@ssw0rd"
     ports:
       - "1433:1433"
