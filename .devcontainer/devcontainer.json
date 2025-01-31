@@ -1,7 +1,7 @@
 {
     "name": "DevContainer42",
     "dockerComposeFile": ["docker-compose.yml"],
-    "service": "app",
+    "service": "db",
     // Add the IDs of extensions you want installed when the container is created.
     "customizations": {
       "vscode": {
