@@ -1,6 +1,5 @@
 {
     "name": "DevContainer42",
     "dockerComposeFile": "docker-compose.yml",
-    "service": "app",
-    "workspaceFolder": "/workspace"
+    "service": "db"
 }
